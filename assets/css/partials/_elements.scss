@@ -1,0 +1,22 @@
+.button {
+	display: inline-block;
+	background: #3c3c3c;
+	height: 60px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 60px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	@media screen and (max-width: 479px) {
+		width: 100%;
+	}
+
+	@include breakpoint(xsmall) {
+		min-width: 400px;
+	}
+}

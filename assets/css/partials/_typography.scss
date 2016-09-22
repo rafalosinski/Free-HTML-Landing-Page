@@ -1,0 +1,130 @@
+@mixin font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	@include font-smoothing;
+}
+
+#header {
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+
+	.headline {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		width: 100%;
+		font-size: 54px;
+		font-weight: 700;
+		padding: 25px;
+		letter-spacing: 0.16em;
+	}
+
+	.subheadline {
+		text-overflow: ellipsis;
+		width: 100%;
+		overflow: hidden;
+		max-width: 100%;
+		font-size: 15px;
+		line-height: 30px;
+		padding: 25px;
+		letter-spacing: 0.06em;
+	}
+}
+
+.about-us .section--about-us {
+	font-weight: 300;
+
+	.about-us__header {
+		font-size: 34px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		white-space: nowrap;
+	}
+
+	.about-us__description {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+
+
+.services .section--services {
+	font-weight: 300;
+	color: #fff;
+
+	.services__header {
+		font-size: 34px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		white-space: nowrap;
+		width: 100%;
+		padding: 0;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 17px;
+			width: 20%;
+			height: 2px;
+			background: #fff;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+
+		@media screen and (min-width: 480px) {
+			&::before,
+			&::after {
+				width: 25%;
+			}
+		}
+
+		@media screen and (min-width: 736px) {
+			&::before,
+			&::after {
+				width: 35%;
+			}
+		}
+
+		@media screen and (min-width: 980px) {
+			&::before,
+			&::after {
+				width: 290px;
+			}
+		}
+	}
+
+	.services__description {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+
+.contact .section--contact {
+	font-weight: 300;
+
+	.contact__header {
+		font-size: 34px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		white-space: nowrap;
+	}
+
+	.contact__description {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}

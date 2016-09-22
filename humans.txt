@@ -1,0 +1,18 @@
+/* TEAM */
+	Developer: Rafał Osiński
+	Contact: hello [at] rafalosinski.com
+	Facebook: fb.me/rafosinski
+	Twitter: @rafosinski
+	From: Gdańsk, Poland
+
+	Designer: Evgenia Kornienko
+	Facebook: fb.me/jane.korney
+	From: California
+
+/* SITE */
+	Last update:2016/09/22
+	Language: English
+    Standards: HTML5, CSS3
+    Components: AOS, jQuery
+	Doctype: HTML5
+	Software: PHPStorm, Photoshop

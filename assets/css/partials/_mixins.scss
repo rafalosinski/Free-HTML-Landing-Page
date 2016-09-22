@@ -1,0 +1,102 @@
+@mixin skel-breakpoints($x: ()) {
+	$breakpoints: $x !global;
+}
+
+@include skel-breakpoints((
+		xlarge: '(min-width: 1800px)',
+		large: '(min-width: 1280px)',
+		medium: '(min-width: 980px)',
+		small: '(min-width: 736px)',
+		xsmall: '(min-width: 480px)',
+		xxsmall: '(min-width: 320px)'
+));
+
+@mixin breakpoint($breakpoint: null, $queries: null) {
+
+	$query: 'screen';
+
+	// Breakpoint.
+	@if $breakpoint and map-has-key($breakpoints, $breakpoint) {
+		$query: $query + ' and ' + map-get($breakpoints, $breakpoint);
+	}
+
+	// Queries.
+	@if $queries {
+		@each $k, $v in $queries {
+			$query: $query + ' and (' + $k + ':' + $v + ')';
+		}
+	}
+
+	@media #{$query} {
+		@content;
+	}
+
+}
+
+@mixin transform($param) {
+	-webkit-transform: $param;
+	-moz-transform: $param;
+	-ms-transform: $param;
+	transform: $param;
+}
+
+@-webkit-keyframes slideDown {
+	from {
+		opacity: 0;
+		margin-top: -200px;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes slideDown {
+	from {
+		opacity: 0;
+		margin-top: -200px;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		margin-top: -200px;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+@-webkit-keyframes slideUp {
+	from {
+		opacity: 0;
+		margin-bottom: -200px;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes slideUp {
+	from {
+		opacity: 0;
+		margin-bottom: -200px;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		margin-bottom: -200px;
+	}
+	to {
+		opacity: 1;
+	}
+}
