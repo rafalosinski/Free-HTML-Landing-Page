@@ -6,7 +6,7 @@
 * @uri: https://github.com/rafalosinski/Free-HTML-Landing-Page
 * @design: [Evgenia Kornienko](https://www.behance.net/JaneKorn)
 * @psd: [https://www.behance.net/gallery/24147467/FREE-PSD-Landing-page](https://www.behance.net/gallery/24147467/FREE-PSD-Landing-page) 
-
+* @demo: [http://rafalosinski.com/portfolio/](http://rafalosinski.com/portfolio/)
 
 ___
 `Version 0.9 - September 22th, 2016`
